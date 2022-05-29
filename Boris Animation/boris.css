@@ -1,0 +1,213 @@
+   html,
+   body {
+       height: 100%;
+       overflow: hidden;
+       margin: 0;
+       background-color: red;
+   }
+   
+   .grass,
+   .sky,
+   .road {
+       position: relative;
+   }
+   
+   .sky {
+       height: 40%;
+       background: skyblue;
+   }
+   
+   .grass {
+       height: 30%;
+       background: seagreen;
+   }
+   
+   .road {
+       height: 30%;
+       background: dimgrey;
+       box-sizing: border-box;
+       border-top: 10px solid gray;
+       border-bottom: 10px solid gray;
+       width: 75 %;
+   }
+   
+   .lines {
+       box-sizing: border-box;
+       border: 10px dashed #fff;
+       height: 0px;
+       border-top: 0px;
+       width: 100%;
+       position: absolute;
+       top: 45%;
+   }
+   
+   .zipwire {
+       box-sizing: border-box;
+       border: 2px solid red;
+       height: 0px;
+       width: 100%;
+       position: absolute;
+       top: 30%;
+   }
+   
+   .boris {
+       position: absolute;
+       top: 78px;
+       left: 0;
+       border-radius: 25%;
+       height: 100px;
+       width: 100px;
+       animation: zipwire 3s infinite;
+   }
+   
+   .boris-tank {
+       position: absolute;
+       top: -50px;
+       left: 0;
+       border-radius: 25%;
+       height: 100px;
+       width: 100px;
+       animation: getFreedomDone 2s infinite;
+   }
+   
+   .boris-tank2 {
+       position: absolute;
+       top: -50px;
+       left: 0;
+       border-radius: 25%;
+       height: 100px;
+       width: 100px;
+       animation: getFreedomDone 6s infinite;
+   }
+   
+   .boris-tank3 {
+       position: absolute;
+       top: -50px;
+       left: 0;
+       border-radius: 25%;
+       height: 100px;
+       width: 100px;
+       animation: getFreedomDone 7s infinite;
+   }
+   
+   .boris-tank4 {
+       position: absolute;
+       top: -50px;
+       left: 0;
+       border-radius: 25%;
+       height: 100px;
+       width: 100px;
+       animation: getFreedomDone 8s infinite;
+   }
+   
+   .boris-tank5 {
+       position: absolute;
+       top: -50px;
+       left: 0;
+       border-radius: 25%;
+       height: 100px;
+       width: 100px;
+       animation: getFreedomDone 9.5s infinite;
+   }
+   
+   .boris-tank6 {
+       position: absolute;
+       top: -50px;
+       left: 0;
+       border-radius: 25%;
+       height: 100px;
+       width: 100px;
+       animation: getFreedomDone 10s infinite;
+   }
+   
+   .boris-tank7 {
+       position: absolute;
+       top: -50px;
+       left: 0;
+       border-radius: 25%;
+       height: 100px;
+       width: 100px;
+       animation: getFreedomDone 11s infinite;
+   }
+   
+   .boris-tank8 {
+       position: absolute;
+       top: -50px;
+       left: 0;
+       border-radius: 25%;
+       height: 100px;
+       width: 100px;
+       animation: getFreedomDone 5.5s infinite;
+   }
+   
+   .boris-tank9 {
+       position: absolute;
+       top: -50px;
+       left: 0;
+       border-radius: 25%;
+       height: 100px;
+       width: 100px;
+       animation: getFreedomDone 20s infinite;
+   }
+   
+   .boris-tank10 {
+       position: absolute;
+       top: -50px;
+       left: 0;
+       border-radius: 25%;
+       height: 100px;
+       width: 100px;
+       animation: getFreedomDone 3s infinite;
+   }
+   
+   .putin-bear {
+       position: absolute;
+       bottom: 20px;
+       right: 0;
+       border-radius: 25%;
+       height: 100px;
+       width: 100px;
+       animation: evilDiktator 5s alternate infinite;
+   }
+   
+   @keyframes zipwire {
+       0% {
+           transform: translateX(0vw)
+       }
+       50% {
+           transform: translateX(100vw)
+       }
+       100% {
+           transform: translateX(0vw)
+       }
+   }
+   
+   @keyframes getFreedomDone {
+       0% {
+           transform: translateX(0)
+       }
+       100% {
+           transform: translateX(100vw)
+       }
+   }
+   
+   @keyframes evilDiktator {
+       0% {
+           transform: translateX(0)
+       }
+       50% {
+           transform: translateX(-80vw)
+       }
+       60% {
+           transform: translateX(-70vw) translateY(-10vw)
+       }
+       80% {
+           transform: translateX(-60vw) translateY(-20vw)
+       }
+       90% {
+           transform: translateX(-70vw) translateY(-25vw)
+       }
+       100% {
+           transform: translateX(-90vw)
+       }
+   }

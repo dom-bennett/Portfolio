@@ -1,0 +1,531 @@
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: normal 16px/1.5 "Helvetica Neue", sans-serif;
+    background: #fff;
+    color: #fff;
+    overflow-x: hidden;
+    padding-bottom: 50px;
+}
+
+.main-navigation {
+    display: inline-block;
+    font-family: monospace;
+}
+
+.main-navigation ul li {
+    display: inline-block;
+    font-size: 40px;
+    padding: 10px;
+}
+
+.main-navigation ul li a {
+    text-decoration: none;
+}
+
+
+/* INTRO SECTION
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+div {
+    border-radius: 20px;
+}
+
+div .preamble {
+    font-size: 20px;
+}
+
+.intro {
+    background: #242038;
+    padding: 100px 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul {
+    background: #242038;
+    padding: 50px 0;
+}
+
+.timeline ul li {
+    list-style-type: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+    padding-top: 50px;
+    background: #fff;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.timeline ul li::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: inherit;
+    z-index: 1;
+}
+
+.timeline ul li div {
+    position: relative;
+    bottom: 0;
+    width: 400px;
+    padding: 15px;
+    background: #169873;
+}
+
+.timeline ul li div::before {
+    content: "";
+    position: absolute;
+    bottom: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.timeline ul li:nth-child(odd) div {
+    left: 45px;
+}
+
+.timeline ul li:nth-child(odd) div::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent #242038 transparent transparent;
+}
+
+.timeline ul li:nth-child(even) div {
+    left: -439px;
+}
+
+.timeline ul li:nth-child(even) div::before {
+    right: -15px;
+    border-width: 8px 0 8px 16px;
+    border-color: transparent transparent transparent #f45b69;
+}
+
+time {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+
+/* EFFECTS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline ul li::after {
+    transition: background 0.5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+    background: #169873;
+}
+
+.timeline ul li div {
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {
+    transform: translate3d(200px, 0, 0);
+}
+
+.timeline ul li:nth-child(even) div {
+    transform: translate3d(-200px, 0, 0);
+}
+
+.timeline ul li.in-view div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media screen and (max-width: 900px) {
+    .timeline ul li div {
+        width: 250px;
+    }
+    .timeline ul li:nth-child(even) div {
+        left: -289px;
+        /*250+45-6*/
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .timeline ul li {
+        margin-left: 20px;
+    }
+    .timeline ul li div {
+        width: calc(100vw - 91px);
+    }
+    .timeline ul li:nth-child(even) div {
+        left: 45px;
+    }
+    .timeline ul li:nth-child(even) div::before {
+        left: -15px;
+        border-width: 8px 16px 8px 0;
+        border-color: transparent #f45b69 transparent transparent;
+    }
+}
+
+
+/* EXTRA/CLIP PATH STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline-clippy ul li::after {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+}
+
+.timeline-rhombus ul li::after {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.timeline-rhombus ul li div::before {
+    bottom: 12px;
+}
+
+.timeline-star ul li::after {
+    clip-path: polygon( 50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.timeline-heptagon ul li::after {
+    clip-path: polygon( 50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+}
+
+.timeline-infinite ul li::after {
+    animation: scaleAnimation 2s infinite;
+}
+
+@keyframes scaleAnimation {
+    0% {
+        transform: translateX(-50%) scale(1);
+    }
+    50% {
+        transform: translateX(-50%) scale(1.25);
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+
+/* FOOTER STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.footer-section {
+    background-color: rgba(109, 75, 75, 0.739);
+}
+
+
+/* .page-footer {
+    position: fixed;
+    right: 0;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    color: black;
+    background: rgba(255, 255, 255, 0.65);
+} */
+
+
+/* 
+.page-footer a {
+    display: flex;
+    margin-left: 4px;
+} */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body {
+    font-family: opens-sans, serif;
+}
+
+h1,
+h2 {
+    color: #fff;
+    font-size: 3em;
+    font-family: arial;
+}
+
+.arabic-h2 {
+    color: rgb(117, 151, 173);
+}
+
+h3 {
+    color: rgb(45, 0, 128);
+}
+
+p {
+    color: rgb(44, 44, 59);
+    font-size: 40px;
+    font-family: arial;
+}
+
+ul a {
+    font-weight: bold;
+}
+
+ul a:hover {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.footer {
+    background-color: rgb(142, 142, 219);
+    padding: 2px 0px 5px 10px;
+    width: 20%;
+    font-size: 20px;
+}
+
+#footer-heading {
+    color: rgb(45, 0, 128);
+    font-family: arial;
+    padding: 20px;
+}
+
+.sm-links {
+    padding: 20px;
+}
+
+.with-margin {
+    color: pink;
+    width: 800px;
+    margin-left: 200px;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 200px;
+}
+
+.italic-special {
+    font-style: italic;
+    font-weight: bold;
+    color: orange;
+}
+
+* box-sizing {
+    border-box;
+}
+
+.profile-pic {
+    border-radius: 5%;
+    height: 400px;
+    width: 400px;
+}
+
+.background-box {
+    background-color: #e9e9e9;
+    border: 1px solid black;
+    padding: 10px 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    border-radius: 5%;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    background-color: rgb(255, 181, 154);
+    padding: 5px;
+    margin-bottom: 50px;
+}
+
+.page-intro {
+    background-color: #e9e9e9;
+    border: 1px solid black;
+    padding: 10px 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    border-radius: 5%;
+    margin-bottom: 20px;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px px 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.fa-pinterest {
+    background: #cb2027;
+    color: white;
+}
+
+.fa-snapchat-ghost {
+    background: #fffc00;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.fa-skype {
+    background: #00aff0;
+    color: white;
+}
+
+.fa-android {
+    background: #a4c639;
+    color: white;
+}
+
+.fa-dribbble {
+    background: #ea4c89;
+    color: white;
+}
+
+.fa-vimeo {
+    background: #45bbff;
+    color: white;
+}
+
+.fa-tumblr {
+    background: #2c4762;
+    color: white;
+}
+
+.fa-vine {
+    background: #00b489;
+    color: white;
+}
+
+.fa-foursquare {
+    background: #45bbff;
+    color: white;
+}
+
+.fa-stumbleupon {
+    background: #eb4924;
+    color: white;
+}
+
+.fa-flickr {
+    background: #f40083;
+    color: white;
+}
+
+.fa-yahoo {
+    background: #430297;
+    color: white;
+}
+
+.fa-soundcloud {
+    background: #ff5500;
+    color: white;
+}
+
+.fa-reddit {
+    background: #ff5700;
+    color: white;
+}
+
+.fa-rss {
+    background: #ff6600;
+    color: white;
+}
+
+
+/* banner*/
+
+.hero-banner {
+    height: 400px;
+    background-image: url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bW91bnRhaW5zfGVufDB8fDB8fA%3D%3D&w=1000&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section {
+    width: 100%;
+    font-size: 3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    color: rgb(35, 104, 80);
+}
+
+#page-title {
+    font-size: 6rem;
+    color: rgb(108, 10, 25);
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+.subheading {
+    color: #fff;
+    font-size: 50px;
+    font-family: arial;
+}

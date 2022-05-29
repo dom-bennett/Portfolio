@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Bennett – Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+
+
+    <header>
+
+
+        <nav class="main-navigation">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="">Menu</a>
+                </li>
+                <li>
+                    <a href="#footer-heading">Contact</a>
+                </li>
+
+
+
+            </ul>
+        </nav>
+
+        <div class=" hero-banner ">
+            <section class="hero-section">
+
+                <div class="hero-section_inner ">
+                    <h1 id="page-title">Dom Bennett<br>Web Developer</h1>
+                </div>
+            </section>
+        </div>
+    </header>
+
+
+    <div class="preamble">
+        <p>Hi and Welcome to my homepage! My name is Dom Bennett and I am a web developer from the UK. Below you can find a list of projects I have worked on. Please contact me on the links at the bottom of the page if you wish to collaborate.</p>
+    </div>
+
+    <section class="intro">
+        <div class="container">
+            <h1>My Projects &darr;</h1>
+            <h3 class="subheading">Please scroll down to see samples of my past projects.</h3>
+        </div>
+    </section>
+
+    <section class="timeline">
+        <ul>
+            <li>
+                <div>
+                    <time><a class="no-underline" href="Top Trumps Card/toptrumps.html" target="_blank">Top Trumps Card</a></time> An example card from the popular card game, using HTML and CSS.
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time><a class="no-underline" href="Chez Dom/chezdomrestaurant.html" target="_blank">Chez Dom Restaurant</a></time>A landing page for a fictional restaurant.
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time><a class="no-underline" href="Google Clone/googleclone.html" target="_blank">Google Homepage Clone</a></time>A basic attempt to produce a visual clone of Google's homepage.
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time><a class="no-underline" href="Boris Animation/boris.html" target="_blank">Boris Johnson Animation</a></time>A slightly tongue-in-cheek parody animation featuring Boris Johnson, using CSS keyframes.
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time><a class="no-underline" href="Car Animation/index.html" target="_blank">Car Animation</a></time>A second, more advanced, animation using CSS Keyframes.
+                </div>
+            </li>
+            <li>
+                <div>
+                    <time><a class="no-underline" href="Starbucks Clone/starbucksclone.html" target="_blank">Starbucks Landing Page</a></time>A partial clone of the homepage of the famous restaurant chain.
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <footer class="footer-section">
+        <div>
+            <h2 id="footer-heading">Connect with me</h2>
+        </div>
+
+
+        <div class="sm-links">
+            <a href="https://api.whatsapp.com/send?phone=#" target="_blank " rel="noopener noreferrer "><i class="fa fa-whatsapp " style="font-size:48px;color:rgb(28, 209, 28) "></i></a>
+            <a href="mailto:#" target="_blank " rel="noopener noreferrer " class="fa fa-google "></a>
+            <a href="https://www.facebook.com/Dom.domari/?ref=page_internal " target="_blank " rel="noopener noreferrer " class="fa fa-facebook "></a>
+            <a href="https://www.twitter.com/godomrep/ " target="_blank " rel="noopener noreferrer " class="fa fa-twitter "></a>
+            <a href="https://www.linkedin.com " target="_blank " rel="noopener noreferrer " class="fa fa-linkedin "></a>
+            <a href="https://www.youtube.com/watch?v=KShnPYN-voI&ab_channel=AaronJack " target="_blank " rel="noopener noreferrer " class="fa fa-youtube "></a>
+            <a href="https://www.instagram.com/godomrep/ " target="_blank " rel="noopener noreferrer " class="fa fa-instagram "></a>
+            <a href="https://www.skype.com/ " target="_blank " rel="noopener noreferrer " class="fa fa-skype "></a>
+        </div>
+    </footer>
+
+
+
+    <script>
+        (function() {
+            "use strict";
+
+            // define variables
+            var items = document.querySelectorAll(".timeline li");
+
+            // check if an element is in viewport
+            // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+            function isElementInViewport(el) {
+                var rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <=
+                    (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            function callbackFunc() {
+                for (var i = 0; i < items.length; i++) {
+                    if (isElementInViewport(items[i])) {
+                        items[i].classList.add("in-view");
+                    }
+                }
+            }
+
+            // listen for events
+            window.addEventListener("load", callbackFunc);
+            window.addEventListener("resize", callbackFunc);
+            window.addEventListener("scroll", callbackFunc);
+        })();
+    </script>
+</body>
+
+</html>

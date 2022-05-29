@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Cloning Project 2 </title>
+    <link rel="stylesheet" href="starbucksclone.css">
+</head>
+
+<body>
+    <section>
+        <div class="circle"></div>
+        <!-- MY HEADER SECTION CODE HERE  -->
+        <header>
+            <a href="#"><img src="images/logo.png" class="logo"></a>
+            <ul>
+                <li><a href="https:starbucks.com" target="_blank">Home</a></li>
+                <li><a href="https://www.starbucks.co.uk/menu" target="_blank">Menu</a></li>
+                <li><a href="https://www.google.com/search?q=starbucks&rlz=1C1CHBF_en-GBGB911GB911&sxsrf=ALiCzsb1CUe3e7n5oDMBrDdVzrc7_b_xGQ:1653850579110&source=lnms&tbm=nws&sa=X&ved=2ahUKEwikxp3CsYX4AhXQiP0HHTncDpgQ_AUoA3oECAIQBQ&biw=1242&bih=597&dpr=1.1"
+                        target="_blank">What's New</a></li>
+                <li><a href="https://customerservice.starbucks.com/app/contact/ask/" target="_blank">Contact</a></li>
+            </ul>
+        </header>
+
+        <!-- This is for my main content -->
+        <div class="content">
+            <div class="textBox">
+                <h2>This is no<br>ordinary coffee. It's<br> <span>Starbucks</span></h2>
+                <p>Pommy ipsum Dalek grub's up indeed it's me peepers lug hole at the boozer old girl roast beef the dog's dinner, chips a right royal knees up cotton on got his end away tad could be a bit of a git had a barney with the inlaws pulled out
+                    the eating irons chuffed and we all like figgy pudding. Jolly good put me soaps back on nutter it's spitting blimey jolly hockey sticks, on the beat leisurely alright duck full English breakast. Anorak fish fingers and custard what
+                    a doddle Weeping Angels Sonic Screwdriver in the goolies old chap what a load of cobblers bits 'n bobs, pigeons in Trafalgar Square a bottle of plonk argy-bargy see a man about a dog a right corker working class lad bit of alright.
+                </p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <!-- For Main BIG STARBUCKS Image -->
+            <div class="imgBox">
+                <img src="images/img1.png" class="starbucks">
+            </div>
+        </div>
+
+        <!-- THIS IS MY THUMBNAIL CODE -->
+        <!-- li*4>img -->
+        <ul class="thumb">
+            <li><img src="images/thumb1.png" onclick="imgSlider('images/img1.png');changeCircleColor('#017143')"></li>
+            <li><img src="images/thumb2.png" onclick="imgSlider('images/img2.png');changeCircleColor('#eb7495')"></li>
+            <li><img src="images/thumb3.png" onclick="imgSlider('images/img3.png');changeCircleColor('#d752b1')"></li>
+        </ul>
+
+        <!-- THIS IS SOCIAL MEDIA ICONS CODE  -->
+        <ul class="socialmedia">
+            <li>
+                <a href="https://facebook.com/starbucks" target="_blank"><img src="images/facebook.png"></a>
+            </li>
+            <li>
+                <a href="https://twitter.com/starbucks" target="_blank"><img src="images/twitter.png"></a>
+            </li>
+            <li>
+                <a href="https://instagram.com/starbucks" target="_blank"><img src="images/instagram.png"></a>
+            </li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything) {
+
+            document.querySelector('.starbucks').src = anything;
+        }
+
+        function changeCircleColor(color) {
+
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Cloning – Project 2</title>
+    <link rel="stylesheet" href="starbucksclone.css">
+</head>
+
+<body>
+    <section>
+        <header>
+
+            <a href="#"><img src="images/logo.png" alt=""></a>
+
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">What's New</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <!-- THis is for my main content -->
+<!-- <div class="content">
+            <div class="textBox">
+
+                <h2>This is not ordinary coffee. It's <span>Starbucks</span>.</h2>
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, velit, asperiores itaque, tenetur eum consectetur voluptas nostrum consequatur repudiandae tempora voluptates harum sit quos nam doloribus obcaecati doloremque voluptatum. Voluptas. In ut
+                facilis obcaecati quasi placeat quis aperiam doloremque sit aut! Aliquam beatae laudantium itaque soluta aliquid sapiente obcaecati officiis sunt sint dolore nobis, id exercitationem et quas corrupti cumque. Debitis atque molestiae vel
+                harum? Fugit natus repudiandae tempore vero inventore aspernatur maxime perspiciatis, rerum explicabo impedit assumenda nostrum magnam officia architecto amet similique repellat minima libero veniam sit et!
+            </p>
+            <a href="#">Learn More</a>
+        </div>
+<!-- </div>
+
+
+<!-- for main BIG STARBUCKS img -->
+<!-- <div class="imgBox">
+
+            <img src="images/img1.png" class="starbucks" alt="image of starbucks coffee">
+        </div> -->
+
+
+<!-- This is thumbnail code  -->
+
+<!-- 
+        <ul class="thumb">
+            <li>
+                <a href="#"><img src="images/thumb1.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="images/thumb2.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="images/thumb3.png" alt=""></a>
+            </li>
+
+        </ul> -->
+
+<!-- This is social media icons code  -->
+<!-- <ul class="socialmedia">
+            <li>
+                <a href="#"><img src="images/facebook.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="images/twitter.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="images/instagram.png" alt=""></a>
+            </li>
+
+        </ul>
+    </section>
+</body>
+
+</html> -->
+
+
+<!-- AMIRA CODE -->

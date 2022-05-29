@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Trumps Cards</title>
+    <link rel="stylesheet" href="../css/trumpsstyle.css">
+
+    <style>
+        #title {
+            background-color: #268ce3;
+            text-align: center;
+            color: white;
+            font-family: "Tahoma", Sans-serif;
+            width: 50%;
+            padding: 10px;
+            height: auto;
+            position: relative;
+            margin: auto;
+            margin-bottom: 50px;
+            border-radius: 10px;
+        }
+        
+        section {
+            background-color: aqua;
+            padding: 10px;
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            margin-bottom: 100px;
+            border-radius: 10px;
+        }
+        
+        .red-text {
+            color: red;
+        }
+        
+        .small-text {
+            font-size: 0.6em;
+        }
+        
+        #discount-icon {
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            border-radius: 10%;
+        }
+        
+        div.heading {
+            width: 20%;
+            margin: auto;
+            text-align: left;
+            margin-bottom: 50px;
+            font-size: 1.5em;
+        }
+        
+        h3 {
+            text-decoration: underline;
+        }
+        
+        .card-container {
+            border: 1px solid black;
+            border-radius: 20px;
+            width: 550px;
+            height: 950px;
+            margin: auto;
+            margin-bottom: 200px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .card {
+            width: 500px;
+            height: 900px;
+            background-color: rgb(235, 226, 164);
+            margin: auto;
+            border-radius: 20px;
+            border: solid white 20px;
+            position: relative;
+        }
+        
+        .card-header {
+            padding: 0;
+            margin: 0;
+        }
+        
+        table {
+            padding: 0;
+            margin: 0;
+            background-color: red;
+        }
+        
+        tr {
+            height: 100px;
+            width: 500px;
+        }
+        
+        td {
+            width: 33%;
+        }
+        
+        .three-d-logo {
+            color: white;
+            font-weight: bold;
+            font-size: 60px;
+            padding: 20px 20px 20px 20px;
+        }
+        
+        .d-logo {
+            width: 80px;
+            height: 60px;
+            background-color: white;
+            text-align: center;
+            font-weight: bold;
+            border: 4px solid black;
+            border-radius: 60%;
+            padding-left: 20px;
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+        }
+        
+        .d-logo p {
+            font-size: 50px;
+            position: absolute;
+            left: 33px;
+            bottom: -48px;
+            display: inline-block;
+        }
+        
+        #german-flag {
+            height: 70px;
+            width: 130px;
+            border: 2px solid black;
+        }
+        
+        #german-flag-cell {
+            padding: 20px 20px 20px 40px;
+        }
+        
+        img {
+            width: 500px;
+            height: 350px;
+        }
+        
+        .card-image {}
+        
+        .card-link {}
+        
+        button {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+            border: none;
+            padding: 5px 7px 5px 7px;
+            position: absolute;
+            top: 410px;
+            right: 20px;
+        }
+        
+        button:hover {
+            background-color: green;
+            opacity: 0.8;
+        }
+        
+        .card-details {
+            font-weight: bold;
+        }
+        
+        .car-name {
+            background-color: rgb(50, 200, 250);
+            text-align: left;
+            font-size: 30px;
+            color: white;
+            font-weight: bold;
+            width: 480px;
+            padding: 10px;
+            display: flex;
+            position: absolute;
+            top: 470px;
+        }
+        
+        .row-1 {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(235, 226, 164);
+            width: 480px;
+            height: 40px;
+            font-size: 20px;
+            position: absolute;
+            bottom: 320px;
+            left: 0;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-bottom: 1px solid black;
+        }
+        
+        .row-2 {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(235, 226, 164);
+            width: 480px;
+            height: 40px;
+            font-size: 20px;
+            position: absolute;
+            bottom: 270px;
+            left: 0;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-bottom: 1px solid black;
+        }
+        
+        .row-3 {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(235, 226, 164);
+            width: 480px;
+            height: 40px;
+            font-size: 20px;
+            position: absolute;
+            bottom: 220px;
+            left: 0;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-bottom: 1px solid black;
+        }
+        
+        .row-4 {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(235, 226, 164);
+            width: 480px;
+            height: 40px;
+            font-size: 20px;
+            position: absolute;
+            bottom: 170px;
+            left: 0;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-bottom: 1px solid black;
+        }
+        
+        .row-5 {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(235, 226, 164);
+            width: 480px;
+            height: 40px;
+            font-size: 20px;
+            position: absolute;
+            bottom: 120px;
+            left: 0;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-bottom: 1px solid black;
+        }
+        
+        .row-6 {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(235, 226, 164);
+            width: 480px;
+            height: 40px;
+            font-size: 20px;
+            position: absolute;
+            bottom: 70px;
+            left: 0;
+            margin-left: 10px;
+            margin-right: 10px;
+            border-bottom: 1px solid black;
+        }
+        
+        .row-value {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="heading">
+        <h2>Top Trumps Single Cards Turbos Fast <br> Sports Cars Waddingtons Issue <br> Various (FB3)</h2>
+    </div>
+
+    <div class="heading">
+
+        <h2><img id="discount-icon" src="images/discount-icon.jpg" alt="pound-discount-icon">BUY 2, GET <span class="red-text">10%</span> OFF
+            <a href="https://www.ebay.co.uk/sme/footybits/Buy-2-Get-10-off/so.html?_seedid=163439171791&_soffType=OrderSubTotalOffer&_soffid=8836895702&_trksid=p2047675.m2197" target="_blank" rel="noopener noreferrer"><span class="small-text">See all eligible items and terms</span></a>
+        </h2>
+    </div>
+
+
+    <div class="card-container">
+
+        <div class="card">
+
+            <div class="card-header">
+
+                <table>
+                    <tr>
+                        <td class="three-d-logo">
+                            3D
+                        </td>
+                        <td>
+                            <div class="d-logo">
+                                <p>D</p>
+                            </div>
+                        </td>
+                        <td id="german-flag-cell">
+                            <img id="german-flag" src="images/german-flag.jpg" alt="German flag">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card-image">
+
+                <img src="images/vw-bickel-polo-turbo.jpg" alt="VW Bickel Polo Turbo">
+
+                <a class="card-link" href="https://www.ebay.co.uk/itm/163439171791?chn=ps&var=462774904504&norover=1&mkevt=1&mkrid=710-134428-41853-0&mkcid=2&itemid=462774904504_163439171791&targetid=1278608952936&device=c&mktype=&googleloc=9045957&poi=&campaignid=14727339348&mkgroupid=127909237815&rlsatarget=pla-1278608952936&abcId=9300672&merchantid=7267174&gclid=CjwKCAiA4KaRBhBdEiwAZi1zzuEUcEuE_9Tu3Qgd7WBp5FMCZsj9V2By9FohhEPUHszYMnDNfZXpWBoCdeUQAvD_BwE"
+                    target="_blank" rel="noopener noreferrer"><button type="submit">Buy Me!</button></a>
+            </div>
+            <div class="car-name">
+                <div class="row-title">VW Bickel Polo Turbo</div>
+            </div>
+            <div class="card-details">
+
+                <div class="row-1">
+                    <div class="row-title">Engine Capacity</div>
+                    <div class="row-value">1290 cc</div>
+                </div>
+
+                <div class="row-2">
+                    <div class="row-title">Cylinders</div>
+                    <div class="row-value">4</div>
+                </div>
+
+                <div class="row-3">
+                    <div class="row-title">Power (kW/hp)</div>
+                    <div class="row-value">85/116</div>
+                </div>
+
+                <div class="row-4">
+                    <div class="row-title">Revs per minute</div>
+                    <div class="row-value">5800</div>
+                </div>
+                <div class="row-5">
+                    <div class="row-title">Weight</div>
+                    <div class="row-value">670 kg</div>
+                </div>
+                <div class="row-6">
+                    <div class="row-title">Top Speed</div>
+                    <div class="row-value">118 m.p.h. </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
